@@ -79,33 +79,8 @@ public class ContactUs {
     }
 
 
-    @Then("^I verify downloaded file name is \"([^\"]*)\"$")
-    public void verifyDownloadedFileInEmployeePage(String fileName) {
-        ScenarioUtils var10000 = this.scenarioUtils;
-        String var10001 = this.configvariable.expandValue(fileName);
-        var10000.write("Downloaded file name=" + var10001);
-        Assert.assertTrue(this.Contactusscreens.isEmployeeFileDownloaded(this.configvariable.expandValue(fileName)), "File downloaded successfully.");
-    }
-
-
-    @Then("^I wait (.*) sec in the HR portal page$")
-    public void waitTime(int time) throws InterruptedException {
-        Thread.sleep(time * 1000);
-    }
-
-
-    @Then("I upload the Signed Proposal file \"([^\"]*)\"")
-    public void uploadSignedProposalFile(String filePath) throws InterruptedException {
-        String var10000 = System.getProperty("user.dir");
-        String path = var10000 + "/src/test/resources" + this.configvariable.expandValue(filePath);
-        Contactusscreens.uploadProposalFormFile(path);
-
-        Thread.sleep(8000);
-    }
-
-
     @Given("^I click the \"([^\"]*)\" in todos screen$")
-    public void i_click_the_in_wikipedia_screen(String arg1) throws Throwable {
+    public void i_click_the_in_todosnew_screen(String arg1) throws Throwable {
         Contactusscreens.clickRegisterButton(configvariable.expandValue(arg1));
     }
 
