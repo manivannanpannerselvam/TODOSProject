@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.1.0 http://maven.apache.org/xsd/settings-1.1.0.xsd"
+          xmlns="http://maven.apache.org/SETTINGS/1.1.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <servers>
+        <server>
+            <username>${artifactory.user}</username>
+            <password>${artifactory.pass}</password>
+            <id>central</id>
+        </server>
+        <server>
+            <username>${artifactory.user}</username>
+            <password>${artifactory.pass}</password>
+            <id>snapshots_coe</id>
+        </server>
+
+    </servers>
+    <profiles>
+        <profile>
+            <id>artifactory-internal</id>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory-new.pru.intranet.asia:8443/artifactory/maven--coe</url>
+                </repository>
+                <repository>
+                    <snapshots/>
+                    <id>snapshots_coe</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory-new.pru.intranet.asia:8443/artifactory/maven--coe</url>
+                </repository>
+
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory-new.pru.intranet.asia:8443/artifactory/maven--coe</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots/>
+                    <id>snapshots_coe</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory-new.pru.intranet.asia:8443/artifactory/maven--coe</url>
+                </pluginRepository>
+
+            </pluginRepositories>
+        </profile>
+
+        <profile>
+            <id>artifactory-external</id>
+            <repositories>
+                <repository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory.pruconnect.net/artifactory/maven--coe</url>
+                </repository>
+                <repository>
+                    <snapshots/>
+                    <id>snapshots_coe</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory.pruconnect.net/artifactory/maven--coe</url>
+                </repository>
+
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <id>central</id>
+                    <name>maven--coe</name>
+                    <url>https://artifactory.pruconnect.net/artifactory/maven--coe</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <snapshots/>
+                    <id>snapshots_coe</id>
+                    <name>maven-pca-coe</name>
+                    <url>https://artifactory.pruconnect.net/artifactory/maven-pca-coe</url>
+                </pluginRepository>
+
+            </pluginRepositories>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>artifactory-internal</activeProfile>
+    </activeProfiles>
+</settings>

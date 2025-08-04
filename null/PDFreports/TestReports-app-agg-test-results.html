@@ -1,0 +1,236 @@
+<html>
+<head><style type="text/css">h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+table {border:1px solid black;border-collapse: collapse;}
+.chart {border:0px none black;border-collapse: collapse;background-color: none;}
+.passed {background-color:lightgreen;font-weight:bold;color:darkgreen}
+.skipped {background-color:silver;font-weight:bold;color:darkgray}
+.failed {background-color:tomato;font-weight:bold;color:darkred}
+.undefined {background-color:gold;font-weight:bold;color:goldenrod}
+.known {background-color:goldenrod;font-weight:bold;color:darkred}
+.passed_description {background-color:#D0FFD0;font-weight:bold;font-style:italic;color:black}
+.failed_description {background-color:#FFA898;font-weight:bold;font-style:italic;color:black}
+.comment {font-family:courier;font-weight:normal;font-size:small;color:black;border:1px dashed black;background-color:silver}
+.tip {font-family:courier;font-weight:normal;font-size:small;color:white;background-color:black}
+OL { counter-reset: item }
+OL>LI { display: block }
+OL>LI:before { content: counters(item, ".") " "; counter-increment: item }
+
+div.header {
+    display: block; text-align: center;
+    position: running(header);
+}
+div.footer {
+    display: block; text-align: center;
+    position: running(footer);
+}
+div.content {page-break-after: always;}
+@page {
+	 size: auto;
+     @top-center {
+     	content: "Detailed Results Report";
+	    color: silver;
+	    font-size: 14px;
+     }
+     @top-right {
+     	content: date("dd MMM, yyyy hh:mm");
+	    color: silver;
+	    font-size: 8px;
+     }
+    @bottom-right {
+    	content: "Page " counter(page) " of " counter(pages) ;
+	    color: silver;
+	    font-size: 8px;
+    }
+}
+</style>
+<title>Detailed Results Report</title>
+<meta charset="UTF-8" />
+</head>
+  <body>
+    <div class='header'></div>
+    <div class='footer'></div>
+<h1>Overview</h1>
+
+
+<table>
+	<tr><th></th><th>Passed</th><th>Failed</th><th>Known</th><th>Undefined</th><th>Total</th><th>%Passed</th></tr>
+	<tr><th>Features</th>
+		<td class="passed" id="features_passed">0</td>
+		<td class="failed" id="features_failed">1</td>
+		<td class="known" id="features_known">0</td>
+		<td class="undefined" id="features_undefined">0</td>
+		<td id="features_total">1</td>
+		<td id="features_rate">
+				0%
+		</td>
+	</tr>
+	<tr><th>Scenarios</th>
+		<td class="passed" id="scenarios_passed">1</td>
+		<td class="failed" id="scenarios_failed">1</td>
+		<td class="known" id="scenarios_known">0</td>
+		<td class="undefined" id="scenarios_undefined">0</td>
+		<td id="scenarios_total">2</td>
+		<td id="scenarios_rate">
+				50%
+		</td>
+	</tr>
+	<tr><th>Steps</th>
+		<td class="passed" id="steps_passed">5</td>
+		<td class="failed" id="steps_failed">1</td>
+		<td class="known" id="steps_known">0</td>
+		<td class="undefined" id="steps_undefined">2</td>
+		<td id="steps_total">8</td>
+		<td id="steps_rate">
+				62%
+		</td>
+	</tr>
+</table>
+<div><b>Overall Duration: 0h 01m 39s</b></div>
+
+<a id="top"></a><h1>Table of Contents</h1>
+
+<ol>
+<li> <span class="failed"><a href="#feature-2verify-login-functionality-on-one-pulse-app">Verify login functionality on One pulse App</a></span>
+	<ol>
+        <li> <span class="passed"><a href="#sc-131-verify-login-functionality-on-one-pulse-app;automate-the-wikipedia-link">Automate the wikipedia link</a></span></li>
+        <li> <span class="failed"><a href="#sc-146-verify-login-functionality-on-one-pulse-app;automate-the-github-url-in-local-server">Automate the Github URL in local server</a></span></li>
+    </ol></li>
+</ol>
+
+<h1>Detailed Results Report</h1>
+
+<table width="700px">
+	<tr class="failed"><td colspan="4"><b>Feature:</b> <a id="feature-2verify-login-functionality-on-one-pulse-app">Verify login functionality on One pulse App</a></td></tr>
+    <tr class="failed">
+    	<td><small><b>Passed:</b> 1</small></td>
+        <td><small><b>Failed:</b> 1</small></td>
+        <td><small><b>Undefined:</b> 0</small></td>
+        <td><small>Duration: 39.12s</small></td>
+    </tr>
+	<tr class="failed">
+		<td colspan="4" style="padding-left:20px">
+		<table width="100%">
+				<tr class="passed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-131-verify-login-functionality-on-one-pulse-app;automate-the-wikipedia-link">Automate the wikipedia link</a>
+					</td>
+				</tr>
+                <tr class="passed">
+                	<td><small><b>Passed:</b> 2</small></td>
+                	<td><small><b>Failed:</b> 0</small></td>
+					<td><small><b>Undefined:</b> 0</small></td>
+					<td><small>Duration: 18.57s</small></td>
+				</tr>
+					<tr class="passed">
+						<td>Before</td>
+						<td colspan="2"></td>
+						<td width="100">0.14s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+                		</td>
+                	</tr>
+                <tr class="passed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Given </b> I Launch the Application &quot;${app.url}&quot;</td>
+                            		<td width="100">8.40s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> i Select the language ane verify the language</td>
+                            		<td width="100">10.03s</td>
+                        		</tr>
+						</table>
+					</td>
+				</tr>
+				
+					<tr class="passed">
+						<td>After</td>
+						<td colspan="2"></td>
+						<td width="100">0.00s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+						</td>
+                	</tr>
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+				<tr class="failed">
+					<td colspan="4">
+						<b>Scenario:</b> <a id="sc-146-verify-login-functionality-on-one-pulse-app;automate-the-github-url-in-local-server">Automate the Github URL in local server</a>
+					</td>
+				</tr>
+                <tr class="failed">
+                	<td><small><b>Passed:</b> 3</small></td>
+                	<td><small><b>Failed:</b> 1</small></td>
+					<td><small><b>Undefined:</b> 2</small></td>
+					<td><small>Duration: 20.55s</small></td>
+				</tr>
+					<tr class="passed">
+						<td>Before</td>
+						<td colspan="2"></td>
+						<td width="100">0.00s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+                		</td>
+                	</tr>
+                <tr class="failed">
+	                <td colspan="4" style="padding-left:20px">
+						<table width="100%">
+                            	<tr class="passed">
+                            		<td><b>Given </b> I Launch the Application &quot;${app.url}&quot;</td>
+                            		<td width="100">7.76s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>When </b> Verify the githubs second repository in github screen</td>
+                            		<td width="100">1.81s</td>
+                        		</tr>
+                            	<tr class="passed">
+                            		<td><b>And </b> Verify the &quot;libdc-for-dirk&quot; repository name in Github screen</td>
+                            		<td width="100">3.61s</td>
+                        		</tr>
+                            	<tr class="failed">
+                            		<td><b>And </b> Verify the &quot;132&quot; Numberofstars in Github screen</td>
+                            		<td width="100">3.51s</td>
+                        		</tr>
+    								<tr class="failed">
+										<td colspan="2">
+											<br>java.lang.AssertionError: expected [132] but found [131]</br><br>	at org.testng.Assert.fail(Assert.java:94)</br><br>	at org.testng.Assert.failNotEquals(Assert.java:513)</br><br>	at org.testng.Assert.assertEqualsImpl(Assert.java:135)</br><br>	at org.testng.Assert.assertEquals(Assert.java:116)</br><br>	at org.testng.Assert.assertEquals(Assert.java:190)</br><br>	at org.testng.Assert.assertEquals(Assert.java:200)</br><br>	at com.onepulse.app.stepdefinitions.mobilesteps.ContactUs.verify_the_Numberofstars_in_Github_screen(ContactUs.java:580)</br><br>	at ✽.And Verify the &quot;132&quot; Numberofstars in Github screen(features/WebApplicatioN_Feature/login.feature:150)</br><br></br>
+										</td>
+									</tr>
+                            	<tr class="skipped">
+                            		<td><b>And </b> Verify Number of Branch in one Repository</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+                            	<tr class="skipped">
+                            		<td><b>And </b> Verify Release coount in one Repository</td>
+                            		<td width="100">0.00s</td>
+                        		</tr>
+									<tr class="skipped">
+										<td colspan="2"><img src="null/146_verify_login_functionality_on_one_pulse_app_automate_the_github_url_in_local_server1637976866561.png" width="100%" /></td>
+									</tr>
+						</table>
+					</td>
+				</tr>
+				
+					<tr class="passed">
+						<td>After</td>
+						<td colspan="2"></td>
+						<td width="100">3.87s</td>
+					</tr>
+                	<tr class="passed">
+                		<td colspan="4">
+						</td>
+                	</tr>
+                <tr><td colspan="5"><sup><a href="#top">Back to Table of Contents</a></sup></td></tr>
+		</table>
+	</td></tr><tr><td colspan="5"></td></tr>
+</table>
+
+	</body>
+</html>
